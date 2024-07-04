@@ -1,0 +1,62 @@
+<!-- <form>
+   
+    <button mat-raised-button type="button" color="primary"
+    (click)="somarBotao(numero1.value, numero2.value)">Somar</button>
+    <p><input matInput [value]="resultado" readonly></p>
+    </form> -->
+
+<p>
+  <mat-form-field>
+    <mat-label>Número 1</mat-label>
+    <input
+      matInput
+      type="number"
+      [(ngModel)]="n1"
+      placeholder="Digite o 1o. número da soma"
+    />
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    <mat-hint>1o. número da soma</mat-hint>
+  </mat-form-field>
+</p>
+<p>
+  <mat-form-field>
+    <mat-label>Número 2</mat-label>
+    <input
+      matInput
+      type="number"
+      [(ngModel)]="n2"
+      placeholder="Digite o 2o. número da soma"
+    />
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    <mat-hint>2o. número da soma</mat-hint>
+  </mat-form-field>
+</p>
+<p>
+  <mat-form-field>
+    <mat-label>Operação</mat-label>
+    <input
+      matInput
+      type="text"
+      [(ngModel)]="op"
+      placeholder="Digite o operador"
+    />
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    <mat-hint>Digite o operador (+,-,*,/)</mat-hint>
+  </mat-form-field>
+</p>
+<p>
+  <button
+    mat-raised-button
+    type="button"
+    color="primary"
+    (click)="handleClick()"
+  >
+    Calcular
+  </button>
+</p>
+<p>
+  <mat-form-field>
+    <mat-label>Resultado</mat-label>
+    <input matInput type="text" type="text" [value]="response" disabled />
+  </mat-form-field>
+</p>
